@@ -1,0 +1,538 @@
+Number of buses: 1
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 32
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 192
+Average travel time: 4791.459459459459
+Max travel time: 14888.0
+Min travel time: 592.0
+
+
+Number of buses: 2
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 29
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 174
+Average travel time: 4902.22891566265
+Max travel time: 16737.0
+Min travel time: 407.0
+
+
+Number of buses: 3
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 25
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 150
+Average travel time: 5947.013698630137
+Max travel time: 16268.0
+Min travel time: 341.0
+
+
+Number of buses: 4
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 25
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 150
+Average travel time: 6097.561872909699
+Max travel time: 15948.0
+Min travel time: 310.0
+
+
+Number of buses: 5
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 24
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 144
+Average travel time: 5674.137142857143
+Max travel time: 15335.0
+Min travel time: 323.0
+
+
+Number of buses: 6
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 22
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 132
+Average travel time: 4269.327543424318
+Max travel time: 13554.0
+Min travel time: 248.0
+
+
+Number of buses: 7
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 20
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 120
+Average travel time: 4420.315035799523
+Max travel time: 15018.0
+Min travel time: 248.0
+
+
+Number of buses: 8
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 20
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 120
+Average travel time: 4031.0188679245284
+Max travel time: 14894.0
+Min travel time: 287.0
+
+
+Number of buses: 9
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 20
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 120
+Average travel time: 5047.297131147541
+Max travel time: 16426.0
+Min travel time: 260.0
+
+
+Number of buses: 10
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 19
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 114
+Average travel time: 5549.193548387097
+Max travel time: 15581.0
+Min travel time: 287.0
+
+
+Number of buses: 11
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 19
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 114
+Average travel time: 5664.98132183908
+Max travel time: 15534.0
+Min travel time: 278.0
+
+
+Number of buses: 12
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 18
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 108
+Average travel time: 4405.236806495264
+Max travel time: 15731.0
+Min travel time: 266.0
+
+
+Number of buses: 13
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 17
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 102
+Average travel time: 4155.022670025189
+Max travel time: 14542.0
+Min travel time: 288.0
+
+
+Number of buses: 14
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 16
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 96
+Average travel time: 4077.7783251231526
+Max travel time: 14691.0
+Min travel time: 236.0
+
+
+Number of buses: 15
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 16
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 96
+Average travel time: 4099.899521531101
+Max travel time: 14305.0
+Min travel time: 253.0
+
+
+Number of buses: 16
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 14
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 84
+Average travel time: 3938.4424242424243
+Max travel time: 15864.0
+Min travel time: 215.0
+
+
+Number of buses: 17
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 13
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 78
+Average travel time: 3846.458997722096
+Max travel time: 13910.0
+Min travel time: 230.0
+
+
+Number of buses: 18
+Size of bus: 40
+Passenger load: 120
+Average bus occupancy: 13
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 78
+Average travel time: 3825.734597156398
+Max travel time: 14470.0
+Min travel time: 227.0
+
+
+Number of buses: 1
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 44
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 176
+Average travel time: 5343.0344827586205
+Max travel time: 14428.0
+Min travel time: 539.0
+
+
+Number of buses: 2
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 37
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 148
+Average travel time: 4494.483516483517
+Max travel time: 14205.0
+Min travel time: 388.0
+
+
+Number of buses: 3
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 34
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 136
+Average travel time: 5702.5203252032525
+Max travel time: 17062.0
+Min travel time: 353.0
+
+
+Number of buses: 4
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 32
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 128
+Average travel time: 5786.446991404012
+Max travel time: 15128.0
+Min travel time: 250.0
+
+
+Number of buses: 5
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 30
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 120
+Average travel time: 4899.048837209302
+Max travel time: 16482.0
+Min travel time: 310.0
+
+
+Number of buses: 6
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 26
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 104
+Average travel time: 4714.507211538462
+Max travel time: 14337.0
+Min travel time: 262.0
+
+
+Number of buses: 7
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 24
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 96
+Average travel time: 4190.590277777777
+Max travel time: 14468.0
+Min travel time: 278.0
+
+
+Number of buses: 8
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 23
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 92
+Average travel time: 4094.164835164835
+Max travel time: 13949.0
+Min travel time: 227.0
+
+
+Number of buses: 9
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 24
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 96
+Average travel time: 5204.699646643109
+Max travel time: 17556.0
+Min travel time: 288.0
+
+
+Number of buses: 10
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 24
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 96
+Average travel time: 4973.486821705426
+Max travel time: 14576.0
+Min travel time: 268.0
+
+
+Number of buses: 11
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 21
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 84
+Average travel time: 4673.543209876543
+Max travel time: 16649.0
+Min travel time: 238.0
+
+
+Number of buses: 12
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 21
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 84
+Average travel time: 4366.715953307393
+Max travel time: 16813.0
+Min travel time: 263.0
+
+
+Number of buses: 13
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 18
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 72
+Average travel time: 4051.392105263158
+Max travel time: 15351.0
+Min travel time: 227.0
+
+
+Number of buses: 14
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 17
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 68
+Average travel time: 4086.246376811594
+Max travel time: 14332.0
+Min travel time: 263.0
+
+
+Number of buses: 15
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 16
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 64
+Average travel time: 3970.5192069392815
+Max travel time: 16517.0
+Min travel time: 227.0
+
+
+Number of buses: 16
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 15
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 60
+Average travel time: 3959.395657418577
+Max travel time: 15254.0
+Min travel time: 257.0
+
+
+Number of buses: 17
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 14
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 56
+Average travel time: 3786.5464159811986
+Max travel time: 13519.0
+Min travel time: 215.0
+
+
+Number of buses: 18
+Size of bus: 60
+Passenger load: 120
+Average bus occupancy: 13
+Max bus occupancy: 60
+Average Passenger Miles Per Gallon: 52
+Average travel time: 4040.528344671202
+Max travel time: 16679.0
+Min travel time: 274.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 3000
+Passenger load: 120
+Average bus occupancy: 7
+Max bus occupancy: 25
+Average Passenger Miles Per Gallon: 42
+Average travel time: 1051.7843137254902
+Max travel time: 2628.0
+Min travel time: 274.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 6000
+Passenger load: 120
+Average bus occupancy: 12
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 72
+Average travel time: 1727.0234741784038
+Max travel time: 4387.0
+Min travel time: 263.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 9000
+Passenger load: 120
+Average bus occupancy: 14
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 84
+Average travel time: 2277.841121495327
+Max travel time: 7225.0
+Min travel time: 263.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 12000
+Passenger load: 120
+Average bus occupancy: 16
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 96
+Average travel time: 2787.2406417112297
+Max travel time: 10131.0
+Min travel time: 302.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 15000
+Passenger load: 120
+Average bus occupancy: 18
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 108
+Average travel time: 3966.630705394191
+Max travel time: 13468.0
+Min travel time: 262.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 18000
+Passenger load: 120
+Average bus occupancy: 20
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 120
+Average travel time: 5590.830122591944
+Max travel time: 17249.0
+Min travel time: 266.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 21000
+Passenger load: 120
+Average bus occupancy: 21
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 126
+Average travel time: 6849.025245441795
+Max travel time: 16615.0
+Min travel time: 263.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 24000
+Passenger load: 120
+Average bus occupancy: 21
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 126
+Average travel time: 7403.123306233062
+Max travel time: 18890.0
+Min travel time: 227.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 27000
+Passenger load: 120
+Average bus occupancy: 22
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 132
+Average travel time: 7778.126463700234
+Max travel time: 25370.0
+Min travel time: 293.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 18000
+Passenger load: 60
+Average bus occupancy: 20
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 120
+Average travel time: 5165.011128775835
+Max travel time: 15183.0
+Min travel time: 245.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 18000
+Passenger load: 240
+Average bus occupancy: 11
+Max bus occupancy: 40
+Average Passenger Miles Per Gallon: 66
+Average travel time: 3609.0710659898477
+Max travel time: 12460.0
+Min travel time: 322.0
+
+
+Number of buses: 10
+Size of bus: 40
+Time of simulation: 18000
+Passenger load: 480
+Average bus occupancy: 5
+Max bus occupancy: 27
+Average Passenger Miles Per Gallon: 30
+Average travel time: 3510.822134387352
+Max travel time: 11968.0
+Min travel time: 326. 
