@@ -1,7 +1,7 @@
 # BusSimulation
 
 A program written in Java that simulates a bus system in order to optimize efficieny of buses based on different numbers of passengers 
-with different numbers of buses and sizes of buses. 
+with different numbers of buses and sizes of buses, etc. 
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ This simulation uses a priority queue to keep track of the execution of differen
 ```java
 // variables to be changed to affect simulation
   public static int BUS_SIZE = 40; // number of passengers a bus can hold (40 or 60)
-  public static int BUS_MPG = 6;
+  public static int BUS_MPG = 6; // miles per gallon fuel efficiency of bus
   public static int NUM_BUSES = 10; // number of buses to be run in simulation
   public static int SIMULATION_TIME_LENGTH = 18000; // time to run simulation in seconds
   public static int PASSENGER_INTERVAL = 480; // how often a passenger will enter the line at a bus stop
@@ -24,7 +24,7 @@ This simulation uses a priority queue to keep track of the execution of differen
   public static String TEXT_FILE_NAME = ""; // filename of text file to write stats to.
 ```
 
-Upon start of this program, the simulation will begin immediatly as all user input/ variables to change are in the constants.java file. This is an accelerated simulation, so if you set SIMULATION_TIME_LENGTH to 10800 (3hrs) it will not take 3 hours to run. It will simulate 3 hours of run time almost immediately. Once the simulation is completed, a number of different statistics will be displayed on screen. For example:
+Upon start of this program, the simulation will begin immediatly as all user input/variables to change should have already been updated in the constants.java file. This is an accelerated simulation, so if you set SIMULATION_TIME_LENGTH to 10800 (3hrs) it will not take 3 hours to run. It will simulate 3 hours of run time almost immediately. Once the simulation is completed, a number of different statistics will be displayed on screen. For example:
 
     Number of buses: 10
     Size of bus: 40
