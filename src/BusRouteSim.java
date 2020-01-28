@@ -1,126 +1,118 @@
 import java.io.*;
+import java.util.Random;
 
 /**
- * Created by Matthew on 11/16/2016.
+ * Runs simulation.
+ * Keeps track of some stats.
+ *
+ * @author  Matt Saffert
+ * @version 1.0
+ * @since   11/16/2016
  */
-//saffe012
 
-
-//Runs simulation
-//Keeps track of some stats
 public class BusRouteSim {
+	static double peopleInBus = 0; // number of people that entered a bus
+	static int totalPeopleSys = 0; // number of passengers that are created and added to a line
+	public static PriorityQueue agenda = new PriorityQueue(); // priority queue to hold all events
 
-    static double peopleInBus = 0;//number of people that entered a bus
+	/**
+	 * Gets current time of simulation.
+	 */
+	public static double getCurrentTime() {
+		return agenda.getCurrentTime();
+	}
 
-    static int totalPeopleSys = 0;//number of passengers that are created and added to a line
+	/**
+	 * Gets current time of simulation.=
+	 * @param stop Stop as int that bus event will occur
+	 * @param direction Direction bus is travelling
+	 */
+	public static void addBusEvent(int stop, String direction) {
+		Bus bus = new Bus();
+		BusEvent BE = new BusEvent(bus, stop, direction);
+		agenda.add(BE, 10);
+	}
 
-    public static PQ agenda = new PQ();//priority queue to hold all events
+  /**
+	 * Populates a BusEvent for each bus in the simulation
+	 */
+	public static void populateInitialBusEvents() {
+    Random random = new Random();
+    int direction;
+    int stop;
 
-    public static Stop F1 = new Stop("University Ave and 27th Street SE");
-    public static Stop F2 = new Stop("Raymond Ave Station");
-    public static Stop F3 = new Stop("University Ave and Fairview Ave");
-    public static Stop F4 = new Stop("University Ave and Snelling Ave");
-    public static Stop F5 = new Stop("University Ave and Lexington Parkway");
-    public static Stop F6 = new Stop("University Ave and Dale Street");
-    public static Stop F7 = new Stop("University Ave and Marion Street");
-    public static Stop F8 = new Stop("Cedar Street and 5th Street");
-    public static Stop F9 = new Stop("Minnesota Street and 4th Street");
-    public static Stop F10 = new Stop("Union Depot");
-
-
-    public static Stop[] stops = {null, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10};
-
-    //gets current time of simulation
-    public static double getCurrentTime() {
-        return agenda.getCurrentTime();
+    // randomly places buses on route in random directions to start
+    for (int i = 0; i < Constants.NUM_BUSES; i++) {
+  		direction = random.nextInt(2);
+      stop = random.nextInt(Constants.BUS_STOPS.length);
+      addBusEvent(stop, Constants.DIRECTIONS[direction]);
     }
+	}
 
-    //Runs simulation by adding correct number of BusEvents to agenda and adding a PassengerEvent
-    //to the agenda for each stop.
-    //A while loop executes the items in the agenda until time runs out.
-    //The 4 variables (busSize, numBuses, time, interval) can be manipulated to create the desired simulation.
-    //Stats are displayed when simulation is complete
-    public static void main(String[] args){
+  /**
+	 * Populates a PassengerEvent for each bus stop in the simulation
+	 */
+  public static void populateInitialPassengerEvents() {
+    // creates then adds passenger events to queue
+		for (int i = 0; i < Constants.BUS_STOPS.length; i++) {
+			agenda.add(new PassengerEvent(i,Constants.BUS_STOPS[i]), 10);
+		}
+	}
 
-        int busSize = 40; // bus size
-        int numBuses = 10; // number of buses
-        int time = 18000; // time to run
-        int interval = 480; //load
+	/**
+	 * Prints stats and writes them to text file if specified.
+	 */
+	public static void writeStats() {
+		// displays stats
+		System.out.println("Number of buses: " + Constants.NUM_BUSES);
+		System.out.println("Size of bus: " + Constants.BUS_SIZE);
+		System.out.println("MPG of bus: " + Constants.BUS_MPG);
+		System.out.println("Time of simulation: " + Constants.SIMULATION_TIME_LENGTH);
+		System.out.println("Average passenger interval: " + Constants.PASSENGER_INTERVAL);
+		System.out.println("Number of people who got on a bus: " + (peopleInBus));
+		System.out.println("Total number of people who got in line: " + totalPeopleSys);
+		Stats.displayStats(null);
 
-        if (numBuses > 10) {
-            for (int i = 0; i < 9; i++) {
-                Bus bus = new Bus(busSize);
-                BusEvent BE = new BusEvent(bus, i+1, "e");
-                agenda.add(BE, 10);
-            }
-            for (int i = 10; i > 9 - (numBuses-10); i--) {
-                Bus bus = new Bus(busSize);
-                BusEvent BE = new BusEvent(bus, i, "w");
-                agenda.add(BE, 10);
-            }
-        }else{
-            for (int i = 0; i < numBuses; i++) {
-                Bus bus = new Bus(busSize);
-                BusEvent BE = new BusEvent(bus, i+1, "e");
-                agenda.add(BE, 10);
-            }
-        }
+		//Used to export stats to text file
+		if (Constants.WRITE_STATS_TO_TXT) {
+			try (FileWriter fw = new FileWriter(Constants.TEXT_FILE_NAME, true);
+			     BufferedWriter bw = new BufferedWriter(fw);
+			     PrintWriter printer = new PrintWriter(bw)) {
+				printer.println("Number of buses: " + Constants.NUM_BUSES);
+				printer.println("Size of bus: " + Constants.BUS_SIZE);
+				printer.println("MPG of bus: " + Constants.BUS_MPG);
+				printer.println("Time of simulation: " + Constants.SIMULATION_TIME_LENGTH);
+				printer.println("Average passenger interval: " + Constants.PASSENGER_INTERVAL);
+				printer.println("Number of people who got on a bus: " + (peopleInBus));
+				printer.println("Total number of people who got in line: " + totalPeopleSys);
+				Stats.displayStats(printer);
+				printer.println('\n');
+				printer.close();
+				System.out.println("Statistics saved to: " + Constants.TEXT_FILE_NAME);
+			}
+			catch (IOException e) {
+				System.out.println("Failed to write stats to file.");
+			}
+		}
+	}
 
+	/**
+	 * Runs simulation by adding a BusEvent for each bus to agenda and adding a PassengerEvent
+	 * to the agenda for each stop.
+	 * A while loop executes the items in the agenda until time runs out.
+	 * The constants (BUS_SIZE, NUM_BUSES, SIMULATION_TIME_LENGTH, PASSENGER_INTERVAL, BUS_MPG) can be manipulated in Constatns.java to create the desired simulation.
+	 * Stats are displayed when simulation is complete.
+	 */
+	public static void main(String[] args) {
 
-        //creates then adds passenger events to queue
-        PassengerEvent PE1 = new PassengerEvent(1,F1,interval);
-        PassengerEvent PE2 = new PassengerEvent(2,F2,interval);
-        PassengerEvent PE3 = new PassengerEvent(3,F3,interval);
-        PassengerEvent PE4 = new PassengerEvent(4,F4,interval);
-        PassengerEvent PE5 = new PassengerEvent(5,F5,interval);
-        PassengerEvent PE6 = new PassengerEvent(6,F6,interval);
-        PassengerEvent PE7 = new PassengerEvent(7,F7,interval);
-        PassengerEvent PE8 = new PassengerEvent(8,F8,interval);
-        PassengerEvent PE9 = new PassengerEvent(9,F9,interval);
-        PassengerEvent PE10 = new PassengerEvent(10,F10,interval);
-        agenda.add(PE1, 10);
-        agenda.add(PE2, 10);
-        agenda.add(PE3, 10);
-        agenda.add(PE4, 10);
-        agenda.add(PE5, 10);
-        agenda.add(PE6, 10);
-        agenda.add(PE7, 10);
-        agenda.add(PE8, 10);
-        agenda.add(PE9, 10);
-        agenda.add(PE10, 10);
+    populateInitialBusEvents();
+  	populateInitialPassengerEvents();
 
-        //runs until simulation time is exhausted
-        while ((agenda.getCurrentTime() <= time)&&(!agenda.isEmpty())) {
-            agenda.remove().run();
-        }
+		// runs until simulation time is exhausted
+		while ((agenda.getCurrentTime() <= Constants.SIMULATION_TIME_LENGTH) && (!agenda.isEmpty())) {
+			agenda.remove().run();
+		}
 
-        //displays stats
-        System.out.println("Number of buses: " + numBuses);
-        System.out.println("Size of bus: " + busSize);
-        System.out.println("Passenger load: " + interval);
-        System.out.println("Number of people who got on a bus: " + (peopleInBus));
-        System.out.println("Total number of people who got in line: " + totalPeopleSys);
-        Stats.displayStats(null);
-
-
-        //Used to export stats to text file
-        /*
-        try(FileWriter fw = new FileWriter("Project4_Data.txt", true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter p = new PrintWriter(bw)){
-            p.println("Number of buses: " + numBuses);
-            p.println("Size of bus: " + busSize);
-            p.println("Time of simulation: " + time);
-            p.println("Passenger load: " + interval);
-            Stats.displayStats(p);
-            p.println('\n');
-            p.close();
-        }
-        catch (IOException e) {
-            System.out.println("nope");
-        }
-        */
-
-
-    }
+		writeStats();
+	}
 }

@@ -1,46 +1,64 @@
 import java.util.Random;
 
 /**
- * Created by Matthew on 11/15/2016.
+ * Created for each passenger added to a line in the bus route sim
+ *
+ * @author  Matt Saffert
+ * @version 1.0
+ * @since   11/16/2016
  */
 
-//Created for each passenger added to a line in the bus route sim
 public class Passenger {
 
-    int pickup;
-    int dropoff;
-    String direction;
-    int[] dropoffArray = {1,2,3,4,5,6,7,8,8,9,9,10,10};
-    double arrivalTime;
+	int pickup; // the stop the passenger was picked up at
+	int dropoff; // the stop the passenger will be dropped off at
+	String direction; // the most efficient direction for the passenger to travel
+	double arrivalTime; // time the passenger was placed in the bus line
 
-    public int getPickupStop(){
-        return pickup;
-    }
+	/**
+	 * Gets the passengers pickup locations
+	 * @return int pickup stop
+	 */
+	public int getPickupStop() {
+		return pickup;
+	}
 
-    //Gets destination of passenger
-    public int getDropoffStop(){
-        return dropoff;
-    }
+	/**
+	 * Gets destination of passenger
+	 * @return int dropoff stop
+	 */
+	public int getDropoffStop() {
+		return dropoff;
+	}
 
-    //gets the time they got in line at the bus station
-    public double getArrivalTime() { return arrivalTime; }
+	/**
+	 * Gets the time they got in line at the bus station
+	 * @return double time passenger was placed in the bus line
+	 */
+	public double getArrivalTime() {
+		return arrivalTime;
+	}
 
-    //instantiates a passenger at the given stop and randomly chooses a destination and sets them in the logical direction
-    public Passenger(double time, int pickupFloor){
-        arrivalTime = time;
-        pickup = pickupFloor;
-        Random random = new Random();
-        dropoff = dropoffArray[random.nextInt(13)];
-        while (dropoff == pickup){
-            dropoff = dropoffArray[random.nextInt(13)];
-        }
+	/**
+	 * Instantiates a passenger at the given stop and randomly chooses a destination and sets them in the logical direction
+	 * @param time Time the passenger was placed in the bus line
+	 * @param pickupFloor The passengers pickup locations
+	 */
+	public Passenger(double time, int pickupStop) {
+		arrivalTime = time;
+		pickup = pickupStop;
+		Random random = new Random();
+		dropoff = Constants.STOP_PROBABILTY_ARRAY[random.nextInt(Constants.STOP_PROBABILTY_ARRAY.length)]; // randomly chooses drop off location
+		while (dropoff == pickup) {  // drop off cannot be same as pickup
+			dropoff = Constants.STOP_PROBABILTY_ARRAY[random.nextInt(Constants.STOP_PROBABILTY_ARRAY.length)];
+		}
 
-        if (dropoff > pickup){
-            direction = "e";
-        }else{
-            direction = "w";
-        }
-    }
-
-
+		// sets most logical direction
+		if (dropoff > pickup) {
+			direction = Constants.EAST;
+		}
+		else {
+			direction = Constants.WEST;
+		}
+	}
 }

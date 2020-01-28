@@ -1,25 +1,39 @@
 /**
- * Created by Matthew on 11/16/2016.
+ * Created for each stop.
+ * Holds a queue for passengers going eastbound and westbound.
+ *
+ * @author  Matt Saffert
+ * @version 1.0
+ * @since   11/16/2016
  */
 
-//Created for each stop.
-//holds a queue for passengers going eastbound and westbound
 public class Stop {
 
-    String name; //Holds name of stop
-    public static Q2 eastBound = new Q2();
-    public static Q2 westBound = new Q2();
+	String name; // Holds name of the stop
+	public static Queue eastBound = new Queue(); // passengers waiting in line travelling east bound
+	public static Queue westBound = new Queue(); // passengers waiting in line travelling west bound
 
-    public Stop(String name){
-        this.name = name;
-    }
+	/**
+	 * Instantiates new Stop with name.
+	 * @param name Name of stop
+	 */
+	public Stop(String name) {
+		this.name = name;
+	}
 
-    public Q2 getEastBound(){
-        return eastBound;
-    }
+	/**
+	 * Instantiates new Stop with name.
+	 * @return Queue Queue of passengers waiting at stop that are east bound
+	 */
+	public Queue getEastBound() {
+		return eastBound;
+	}
 
-    public Q2 getWestBound(){
-        return westBound;
-    }
-
+	/**
+	 * Instantiates new Stop with name.
+	 * @return Queue Queue of passengers waiting at stop that are west bound
+	 */
+	public Queue getWestBound() {
+		return westBound;
+	}
 }
