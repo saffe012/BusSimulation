@@ -28,15 +28,19 @@ Upon start of this program, the simulation will begin immediatly as all user inp
 
     Number of buses: 10
     Size of bus: 40
-    Passenger load: 480
-    Number of people who got on a bus: 387.0
-    Total number of people who got in line: 388
-    Average bus occupancy: 5
-    Max bus occupancy: 20
-    Average Passenger Miles Per Gallon: 30
-    Average travel time: 3276.4823529411765
-    Max travel time: 13876.0
-    Min travel time: 326.0
+    MPG of bus: 6
+    Time of simulation: 43200
+    Average passenger interval: 480
+    Number of people who got on a bus: 725.0
+    Total number of people who got in line: 936
+    Average bus occupancy: 10.275862068965518
+    Max bus occupancy: 40
+    Average Passenger Miles Per Gallon: 61.65517241379311
+    Average travel time: 6434.297008547009
+    Max travel time: 26002.0
+    Min travel time: 306.0
+    
+This simulation starts with empty buses initialized at a random stop travelling in a random direction. There are also no passengers queued at any stop when the simulation starts. 
 
 ## Authors
 Matt Saffert
