@@ -5,6 +5,8 @@ import java.util.Random;
  * Runs simulation.
  * Keeps track of some stats.
  *
+ * Anatomy of scheduling: PriorityQueue[Segments(Queue[Events])]
+ *
  * @author  Matt Saffert
  * @version 1.0
  * @since   11/16/2016
